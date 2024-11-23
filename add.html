@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Add Book</title>
+</head>
+<body>
+    <header>
+        <h1>Add a New Book</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/books">View Books</a>
+        </nav>
+    </header>
+    <main>
+        <form method="POST">
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="To-Read">To-Read</option>
+                <option value="Read">Read</option>
+            </select>
+            <button type="submit">Add Book</button>
+        </form>
+    </main>
+</body>
+</html>
